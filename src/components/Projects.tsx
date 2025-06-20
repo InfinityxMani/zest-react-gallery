@@ -55,16 +55,16 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             My{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-blue-600 dark:text-blue-400">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Here are some of my favorite projects that showcase my skills and passion for creating 
             innovative solutions. Each project represents a unique challenge and learning experience.
           </p>
@@ -74,7 +74,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group"
+              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -100,14 +100,14 @@ const Projects = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-purple-500/20 transition-colors duration-200"
+                      className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                     >
                       {tech}
                     </span>
