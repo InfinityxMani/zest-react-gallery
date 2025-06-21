@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-12 transition-colors duration-300"
+      className="bg-[#1b181e] border-t border-gray-700/50 py-12 transition-colors duration-300"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -31,7 +31,7 @@ const Footer = () => {
               <motion.a
                 key={label}
                 href={href}
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                 whileHover={{ scale: 1.2, y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -50,11 +50,11 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p className="text-gray-600 dark:text-gray-400 flex items-center justify-center space-x-1">
+            <p className="text-gray-400 flex items-center justify-center space-x-1">
               <span>© 2024 Aryan Developer. Made with</span>
               <motion.span
                 animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 1, repeat: Infinity }}
               >
                 <Heart className="w-4 h-4 text-red-500 fill-current" />
               </motion.span>

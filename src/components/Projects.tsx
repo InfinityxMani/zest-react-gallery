@@ -56,7 +56,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0c0c0c] via-[#0a0a0a] to-[#1b181e] transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"
@@ -65,13 +65,13 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             My{' '}
-            <span className="text-blue-600 dark:text-blue-400">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Here are some of my favorite projects that showcase my skills and passion for creating 
             innovative solutions. Each project represents a unique challenge and learning experience.
           </p>
