@@ -103,7 +103,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1b181e] via-[#0a0a0a] to-[#0c0c0c] transition-colors duration-300">
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-[#1c1920] dark:via-[#141217] dark:to-[#0c0c0c] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div 
           className="grid lg:grid-cols-2 gap-16 items-center"
@@ -114,43 +114,21 @@ const Hero = () => {
           {/* Left Column - Content */}
           <div className="space-y-8">
             <motion.div className="space-y-6" variants={itemVariants}>
-              {/* Status Badges */}
-              <motion.div 
-                className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3"
-                variants={badgeVariants}
-              >
-                <motion.div 
-                  className="flex items-center bg-green-50/10 dark:bg-green-900/20 border border-green-200/20 dark:border-green-800/30 text-green-400 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-                  Available for hire
-                </motion.div>
-                <motion.div 
-                  className="bg-blue-50/10 dark:bg-blue-900/20 border border-blue-200/20 dark:border-blue-800/30 text-blue-400 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  🏆 SIH 2024 Winner
-                </motion.div>
-              </motion.div>
-
               <motion.div variants={itemVariants}>
-                <p className="text-gray-400 text-lg mb-2">Hello, I'm</p>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Aryan</span> Developer
+                <p className="text-gray-600 dark:text-gray-400 text-lg mb-2">Hello, I'm</p>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-4">
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">Aryan</span> Developer
                 </h1>
-                <div className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 h-12 flex items-start">
+                <div className="text-2xl sm:text-3xl lg:text-4xl text-gray-700 dark:text-gray-300 h-12 flex items-start">
                   <span className="font-light">
                     {text}
-                    <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity text-blue-400`}>|</span>
+                    <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity text-blue-600 dark:text-blue-400`}>|</span>
                   </span>
                 </div>
               </motion.div>
 
               <motion.p 
-                className="text-lg text-gray-400 max-w-2xl leading-relaxed"
+                className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed"
                 variants={itemVariants}
               >
                 I create beautiful, responsive web applications with modern technologies. 
@@ -171,7 +149,7 @@ const Hero = () => {
                 <span>Download Resume</span>
               </motion.button>
               <motion.button 
-                className="border-2 border-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800/50 transition-all duration-300"
+                className="border-2 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -194,7 +172,7 @@ const Hero = () => {
                 <motion.a
                   key={index}
                   href={href}
-                  className="w-12 h-12 bg-gray-800/50 hover:bg-blue-900/30 border border-gray-700 text-gray-300 hover:text-blue-400 rounded-full flex items-center justify-center shadow-sm backdrop-blur-sm"
+                  className="w-12 h-12 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-blue-100 dark:hover:bg-blue-900/30 border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-full flex items-center justify-center shadow-sm backdrop-blur-sm"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -211,7 +189,7 @@ const Hero = () => {
           >
             <div className="relative">
               <motion.div 
-                className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-gray-700/50"
+                className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-gray-200/50 dark:border-gray-700/50"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -253,7 +231,7 @@ const Hero = () => {
 
         <motion.button
           onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-blue-400 transition-colors duration-300"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           whileHover={{ scale: 1.1 }}
